@@ -16,7 +16,6 @@ spongemock
 zalgo-text
 geopy
 nltk
-tswift
 psutil
 aiohttp>=2.2.5
 Pillow
