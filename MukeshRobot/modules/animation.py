@@ -4,9 +4,9 @@ from typing import List
 from telegram import Update
 from telegram.ext import run_async,CallbackContext
 
-from Tianabot import dispatcher
-from Tianabot.modules.disable import DisableAbleCommandHandler
-from Tianabot.modules.helper_funcs.chat_status import user_admin
+from MukeshRobot import dispatcher
+from MukeshRobot.modules.disable import DisableAbleCommandHandler
+from MukeshRobot.modules.helper_funcs.chat_status import user_admin
 
 #sleep how many times after each edit in 'love' 
 EDIT_SLEEP = 1
