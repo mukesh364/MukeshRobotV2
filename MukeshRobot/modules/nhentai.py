@@ -7,7 +7,7 @@ from pyrogram.types import (InlineKeyboardMarkup,
                             InputTextMessageContent
                             )
 
-from MukeshRobot import pbot, telegraph
+from MukeshRobot import pbot, telegram
 from MukeshRobot.utils.errors import capture_err
 
 
