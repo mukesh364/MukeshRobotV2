@@ -26,6 +26,7 @@ dispatcher.add_handler(WALL_HANDLER)
 
 __mod_name__ = "Wall"
 
-__help__ = """
+__help__ ="""
 
 ❍ /wall try baby
+"""
