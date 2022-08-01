@@ -28,4 +28,4 @@ __mod_name__ = "Wall"
 
 __help__ = """
 
- ❍ /wall try baby
+❍ /wall try baby
