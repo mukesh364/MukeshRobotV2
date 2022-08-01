@@ -199,3 +199,8 @@ async def captcha_state(_, message):
         await message.reply_text("ᴅɪsᴀʙʟᴇᴅ ᴋᴀʀᴍᴀ sʏsᴛᴇᴍ.")
     else:
         await message.reply_text(usage)
+__mod_name = "ᴋᴀʀᴍᴀ"
+__help__= """ ᴜsᴇ  ᴛᴏ ᴜᴘᴠᴏᴛᴇ (?i)\+|\+\+|\+1|thx|thanx|thanks|thankyou|love|pro|🖤|❣️|💝|nice|crt|❤|💘|cool|good|👍|mukesh|)$"
+)
+ Usᴇ ᴛᴏ ᴅᴇᴍᴏᴛᴇ  r"^(\-|\-\-|\-1|👎|💔|noob|weak|lol|bad|wrong|right|)"""
+
