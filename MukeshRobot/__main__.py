@@ -459,10 +459,11 @@ def Mukesh_about_callback(update: Update, context: CallbackContext):
             disable_web_page_preview=False,
         )
 
- @run_async
- def Music_about_callback(update: Update, context: CallbackContext):
+@run_async
+def Music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "Music_":
+        uptime = get_readable_time((time.time()
         query.message.edit_text(
             text="""
   ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs:
