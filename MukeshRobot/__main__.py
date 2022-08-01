@@ -464,8 +464,7 @@ def Music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "Music_":
         query.message.edit_text(
-            text="""
-  ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs:
+            text=f"""ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs:
 
  ᴊᴜsᴛ ᴀᴅᴅ **ᴄ** ɪɴ ᴛʜᴇ sᴛᴀʀᴛɪɴɢ ᴏғ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜsᴇ ᴛʜᴇᴍ ғᴏʀ ᴄʜᴀɴɴᴇʟ.
 
