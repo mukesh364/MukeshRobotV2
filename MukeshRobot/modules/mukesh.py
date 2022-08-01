@@ -192,4 +192,4 @@ async def get_users(show):
 
 
 
-__mod_name__ = "Unbanll"
+__mod_name__ = "ᴜɴʙᴀɴᴀʟʟ"
