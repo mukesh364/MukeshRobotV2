@@ -25,9 +25,4 @@ WALL_HANDLER = DisableAbleCommandHandler("wall", wall)
 dispatcher.add_handler(WALL_HANDLER)
 
 __mod_name__ = "Wall"
-__command_list__ = [
-    "wall"
-]
-__handlers__ = [
-    WALL_HANDLER
 ]
