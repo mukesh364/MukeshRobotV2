@@ -1,7 +1,7 @@
 from os import remove
 from pyrogram import filters
 
-from MukeshRobot import SUDO_USERS, arq, pbot
+from MukeshRobot import OWNER_USERNAME, arq, pbot
 from MukeshRobot.utils.errors import capture_err
 from MukeshRobot.utils.permissions import adminsOnly
 from MukeshRobot.modules.mongo.nsfw_mongo import is_nsfw_on, nsfw_off, nsfw_on
