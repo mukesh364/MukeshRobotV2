@@ -23,6 +23,6 @@ async def apakah(event):
         await event.reply('Berikan saya pertanyaan 😐')
         return
     await event.reply(random.choice(APAKAH_STRING))
-__mod_name = "Apakah"
-_help_ = """ Try /apakah 
+__mod_name__ = "Apakah"
+__help__ = """ Try /apakah 
 """
