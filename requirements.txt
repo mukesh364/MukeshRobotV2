@@ -1,4 +1,5 @@
 future
+envparse
 emoji
 lxml
 wget
