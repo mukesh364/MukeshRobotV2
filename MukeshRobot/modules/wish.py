@@ -49,7 +49,7 @@ async def lel(bot, message):
     return await message.reply_text(text=ran)
 
 
-__mod_name__ = "ʀᴀᴋʜɪ"
+__mod_name__ = "ᴡɪsʜ"
 
 __help__ = """
 
@@ -57,5 +57,5 @@ __help__ = """
 ❍ /rakshabandhan *:* ᴡɪsʜ ᴏɴ ғᴇsᴛɪᴠᴀʟ
 ❍ /rakhi *:* ᴏʀ ᴛʀʏ ᴛʜɪs
 ❍ /Independence *:*  ɪɴᴅᴇᴘᴇɴᴅᴇɴᴄᴇ ᴅᴀʏ ᴡɪsʜᴇs
-❍ /India *:* or try India
+❍ /Indian *:* or try Indian
  """
