@@ -5,7 +5,7 @@ from pyrogram import filters
 from MukeshRobot import pbot, arq, BOT_USERNAME as bn
 from MukeshRobot.utils.errors import capture_err
 from MukeshRobot.utils.permissions import adminsOnly
-from MukeshRobot.ex_plugins.dbfunctions import is_nsfw_on, nsfw_off, nsfw_on
+from MukeshRobot.helper_extra.dbfunctions import is_nsfw_on, nsfw_off, nsfw_on
 
 __mod_name__ = "Anti-NSFW​"
 
