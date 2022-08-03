@@ -149,3 +149,4 @@ __handlers__ = [
     ANIMEQUOTES_HANDLER,
     QUOTES_HANDLER,
 ]
+__mod__name = 'quote'
