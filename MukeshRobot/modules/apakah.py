@@ -24,4 +24,5 @@ async def apakah(event):
         return
     await event.reply(random.choice(APAKAH_STRING))
 __mod_name = "Apakah"
-_help_ = """ Try /apakah
+_help_ = """ Try /apakah 
+"""
