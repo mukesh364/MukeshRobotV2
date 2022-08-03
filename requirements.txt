@@ -1,4 +1,5 @@
 future
+nekos.py
 envparse
 emoji
 lxml
