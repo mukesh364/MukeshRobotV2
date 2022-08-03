@@ -4,7 +4,7 @@ import re
 import requests
 from bs4 import BeautifulSoup as bs
 
-from Cutiepii_Robot.events import register
+from MukeshRobot.events import register
 
 try:
     import aiofiles
