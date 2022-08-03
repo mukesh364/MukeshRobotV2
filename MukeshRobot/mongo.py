@@ -7,7 +7,7 @@ from pymongo import MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
 
 from MukeshRobot import MONGO_DB_URI
-from MukeshRobot.helper_extra.dbfun confing import get_int_key, get_str_key
+from MukeshRobot.helper_extra.dbfun import get_int_key, get_str_key
 
 
 MONGO_PORT = get_int_key("27017")
