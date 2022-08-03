@@ -24,7 +24,7 @@ wish_STRINGS = [
                    ]
 
 
-@MukeshRobot.on_message(filters.command("rakhi"))
+@MukeshRobot.on_message(filters.command(["rakhi", "rakshabandhan"]))
 async def lel(bot, message):
     ran = random.choice(wish_STRINGS)
     await bot.send_chat_action(message.chat.id, "typing")
