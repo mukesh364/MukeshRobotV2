@@ -9,9 +9,9 @@ from telegram.ext import run_async
 
 from MukeshRobot import dispatcher
 from MukeshRobot.modules.disable import DisableAbleCommandHandler
-from MukeshRobot.modules.helper_funcs.alternate  import typing_action, send_action
+from MukeshRobot.modules.helper_funcs.alternate  import typing_action, send_message
 
-@send_action(ChatAction.RECORD_AUDIO)
+@send_message(ChatAction.RECORD_AUDIO)
 def gtts(update, context):
     msg = update.effective_message
     reply = " ".join(context.args)
