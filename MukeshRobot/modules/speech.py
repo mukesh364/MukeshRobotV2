@@ -11,8 +11,7 @@ from MukeshRobot.modules.disable import DisableAbleCommandHandler
 from MukeshRobot.modules.helper_funcs.alternate  import typing_action, send_action
 
 @send_action(ChatAction.RECORD_AUDIO)
-def gtts(update, context):
-    msg = update.effective_message
+   msg = update.effective_message
     reply = " ".join(context.args)
     if not reply:
         if msg.reply_to_message:
@@ -25,13 +24,12 @@ def gtts(update, context):
             reply = reply.replace(x, "")
     try:
         tts = gTTS(reply, lang='en', tld='co.in')
-        tts.save("Mukesh.mp3")
-        with open("mukesh.mp3", "rb") as speech:
+        tts.save("k.mp3")
+        with open("k.mp3", "rb") as speech:
             msg.reply_audio(speech)
     finally:
-        if os.path.isfile("Mukesh.mp3"):
-            os.remove("Mukesh.mp3")
-
+        if os.path.isfile("k.mp3"):
+            os.remove("k.mp3")
 
 # Open API key
 API_KEY = "6ae0c3a0-afdc-4532-a810-82ded0054236"
