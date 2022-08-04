@@ -26,12 +26,12 @@ def gtts(update, context):
             reply = reply.replace(x, "")
     try:
         tts = gTTS(reply, lang='en', tld='co.in')
-        tts.save("k.mp3")
-        with open("k.mp3", "rb") as speech:
+        tts.save("mukesh.mp3")
+        with open("mukesh.mp3", "rb") as speech:
             msg.reply_audio(speech)
     finally:
-        if os.path.isfile("k.mp3"):
-            os.remove("k.mp3")
+        if os.path.isfile("mukesh.mp3"):
+            os.remove("mukesh.mp3")
 
 
 # Open API key
@@ -73,7 +73,7 @@ dispatcher.add_handler(DisableAbleCommandHandler("splcheck", spellcheck))
 __help__ = """
  ‣ `/audio`: Convert Text in Bot Audio 
  *Usage*: reply to text or write message with command. Example `/audio hello`
- ‣ `/slpcheck`: Check the right spelling of text
+ ‣ `/slpcheck` : Check the right spelling of text
 """
 __mod_name__ = "sᴘᴇᴇᴄʜ-ᴛᴇxᴛ"
 __command_list__ = ["audio"]
