@@ -10,9 +10,10 @@ from MukeshRobot import dispatcher
 from MukeshRobot.modules.disable import DisableAbleCommandHandler
 from MukeshRobot.modules.helper_funcs.alternate  import typing_action, send_action
 
+
 @send_action(ChatAction.RECORD_AUDIO)
 def gtts(update, context):
-   msg = update.effective_message
+    msg = update.effective_message
     reply = " ".join(context.args)
     if not reply:
         if msg.reply_to_message:
@@ -31,6 +32,7 @@ def gtts(update, context):
     finally:
         if os.path.isfile("k.mp3"):
             os.remove("k.mp3")
+
 
 # Open API key
 API_KEY = "6ae0c3a0-afdc-4532-a810-82ded0054236"
@@ -65,13 +67,13 @@ def spellcheck(update, context):
             "Reply to some message to get grammar corrected text!"
         )
 
-dispatcher.add_handler(DisableAbleCommandHandler("audio", gtts, pass_args=True))
-dispatcher.add_handler(DisableAbleCommandHandler("splcheck", spellcheck))
+dispatcher.add_handler(DisableAbleCommandHandler("tts", gtts, pass_args=True, run_async=True))
+dispatcher.add_handler(DisableAbleCommandHandler("splcheck", spellcheck, run_async=True))
 
 __help__ = """
- ‣ `/audio`: Convert Text in Bot Audio 
- *Usage*: reply to text or write message with command. Example `/audio hello`
+ ‣ `/tts`: Convert Text in Bot Audio 
+ *Usage*: reply to text or write message with command. Example `/tts hello`
  ‣ `/slpcheck`: Check the right spelling of text
 """
-__mod_name__ = "s-ᴛᴇxᴛ"
-__command_list__ = ["tts" ,"audio"]
+__mod_name__ = "Speech Text"
+__command_list__ = ["tts"]
