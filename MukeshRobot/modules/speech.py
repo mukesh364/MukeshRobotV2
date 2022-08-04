@@ -66,13 +66,13 @@ def spellcheck(update, context):
             "Reply to some message to get grammar corrected text!"
         )
 
-dispatcher.add_handler(DisableAbleCommandHandler("tts", gtts, pass_args=True))
+dispatcher.add_handler(DisableAbleCommandHandler("audio", gtts, pass_args=True))
 dispatcher.add_handler(DisableAbleCommandHandler("splcheck", spellcheck))
 
 __help__ = """
- ‣ `/tts`: Convert Text in Bot Audio 
- *Usage*: reply to text or write message with command. Example `/tts hello`
+ ‣ `/audio`: Convert Text in Bot Audio 
+ *Usage*: reply to text or write message with command. Example `/audio hello`
  ‣ `/slpcheck`: Check the right spelling of text
 """
 __mod_name__ = "s-ᴛᴇxᴛ"
-__command_list__ = ["tts"]
+__command_list__ = ["tts" ,"audio"]
