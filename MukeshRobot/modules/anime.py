@@ -7,7 +7,7 @@ import time
 from MukeshRobot import dispatcher
 from MukeshRobot.modules.disable import DisableAbleCommandHandler
 from MukeshRobot.modules.helper_funcs.chat_status import (is_user_admin)
-from telegram.ext import CallbackContext, CommandHandler, Filters, run_async, CallbackQueryHandler
+from telegram.ext import CallbackContext, CommandHandler, Filters, CallbackQueryHandler
 from telegram import ParseMode, Update, InlineKeyboardMarkup, InlineKeyboardButton, replymarkup, ChatPermissions
 from telegram.error import BadRequest
 
@@ -127,8 +127,8 @@ QUOTES_IMG = (
       
       )    
 
-ANIMEQUOTES_HANDLER = DisableAbleCommandHandler("animequotes", animequotes, run_async=True)
-QUOTES_HANDLER = DisableAbleCommandHandler("quote", quotes, run_async=True)
+ANIMEQUOTES_HANDLER = DisableAbleCommandHandler("animequotes", animequotes)
+QUOTES_HANDLER = DisableAbleCommandHandler("quote", quotes)
 
 CHANGE_QUOTE = CallbackQueryHandler(
     change_quote, pattern=r"change_.*")
