@@ -11,6 +11,7 @@ from MukeshRobot.modules.disable import DisableAbleCommandHandler
 from MukeshRobot.modules.helper_funcs.alternate  import typing_action, send_action
 
 @send_action(ChatAction.RECORD_AUDIO)
+def gtts(update, context):
    msg = update.effective_message
     reply = " ".join(context.args)
     if not reply:
