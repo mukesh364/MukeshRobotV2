@@ -8,8 +8,8 @@ from telegram import ChatAction
 from telegram.ext import run_async
 
 from MukeshRobot import dispatcher
-from MukeshRobot.Plugins.disable import DisableAbleCommandHandler
-from MukeshRobot.Handlers.alternate import typing_action, send_action
+from MukeshRobot.modules.disable import DisableAbleCommandHandler
+from MukeshRobot.modules.helper_funcs.alternate  import typing_action, send_action
 
 @send_action(ChatAction.RECORD_AUDIO)
 def gtts(update, context):
