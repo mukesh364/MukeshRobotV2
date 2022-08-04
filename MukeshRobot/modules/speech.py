@@ -5,7 +5,6 @@ import requests
 import json
 
 from telegram import ChatAction
-from telegram.ext import run_async
 
 from MukeshRobot import dispatcher
 from MukeshRobot.modules.disable import DisableAbleCommandHandler
@@ -67,8 +66,8 @@ def spellcheck(update, context):
             "Reply to some message to get grammar corrected text!"
         )
 
-dispatcher.add_handler(DisableAbleCommandHandler("tts", gtts, pass_args=True, run_async=True))
-dispatcher.add_handler(DisableAbleCommandHandler("splcheck", spellcheck, run_async=True))
+dispatcher.add_handler(DisableAbleCommandHandler("tts", gtts, pass_args=True)
+dispatcher.add_handler(DisableAbleCommandHandler("splcheck", spellcheck))
 
 __help__ = """
  ‣ `/tts`: Convert Text in Bot Audio 
