@@ -1,4 +1,5 @@
 future
+gtts
 nekos.py
 envparse
 emoji
