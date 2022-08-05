@@ -199,6 +199,6 @@ async def captcha_state(_, message):
         await message.reply_text("ᴅɪsᴀʙʟᴇᴅ ᴋᴀʀᴍᴀ sʏsᴛᴇᴍ.")
     else:
         await message.reply_text(usage)
-__mod_name = "ᴋᴀʀᴍᴀs"
+__mod_name__ = "ᴋᴀʀᴍᴀs"
 __help__= """ ᴜsᴇ  ᴛᴏ ᴜᴘᴠᴏᴛᴇ ᴀɴᴅ ᴅᴏᴡɴᴠᴏᴛᴇ ɪɴ ᴋᴀʀᴍᴀ """
 
