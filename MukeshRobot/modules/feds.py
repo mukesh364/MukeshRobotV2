@@ -39,7 +39,6 @@ from telegram.ext import (
     CallbackContext,
     CallbackQueryHandler,
     CommandHandler,
-    run_async,
 )
 from telegram.utils.helpers import mention_html, mention_markdown
 
