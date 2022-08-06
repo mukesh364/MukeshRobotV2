@@ -82,6 +82,7 @@ if ENV:
     VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
     LOAD = os.environ.get("LOAD", "").split()
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
+    BOT_ID = bot_info.id
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", False))
