@@ -1,20 +1,33 @@
 import os
 import re
 import random
+import asyncio
 from platform import python_version as kontol
 from telethon import events, Button
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
 from pyrogram import __version__ as pyrover
+from pyrogram.types import InlineKeyboardbutton, InlineKeyboardMarkup, Message
 from MukeshRobot.events import register
-from MukeshRobot import telethn as tbot, SUPPORT_CHAT, OWNER_USERNAME, dispatcher
+from MukeshRobot import telethn as tbot, SUPPORT_CHAT, OWNER_USERNAME, pbot
 
 
 PHOTO = [
     "https://telegra.ph/file/2fa198671702c837edfd5.jpg",
     "https://telegra.ph/file/bcac3e1512fd6d5359ca0.jpg",
 ]
-
+  Mukesh = [
+    [
+        InlineKeyboardButton(text="ɴᴏᴏʙ", url=f"https://t.me/itz_mst_boi"),
+        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="ᴀᴅᴅ ᴍᴇ ᴇʟsᴇ ʏᴏᴜ ɢᴇʏ",
+            url=f"https://t.me/groupcontrollertgbot?startgroup=true",
+        ),
+    ],
+]
 
 @register(pattern=("alive"))
 async def awake(event):
@@ -30,7 +43,7 @@ async def awake(event):
         ]
     ]
     ran = random.choice(PHOTO)
-    await tbot.send_file(event.chat_id, ran, caption=TEXT, buttons=BUTTON)
+    await tbot.send_file(event.chat_id, ran, caption=TEXT, InlineKeyboardMarkup(Mukesh))
 
 
 __mod_name__ = "Aʟɪᴠᴇ"
