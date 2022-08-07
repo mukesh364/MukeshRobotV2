@@ -1,5 +1,5 @@
 import html
-from pyrogram import CallbackContext
+from telegram.ext import CallbackContext
 from pyrogram import Filters
 from MukeshRobot.modules.helper_funcs.chat_status import bot_admin, bot_can_delete
 
