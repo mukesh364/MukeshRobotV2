@@ -1,6 +1,6 @@
 import html
 from telegram.ext import CallbackContext
-from pyrogram import Filters
+from pyrogram import filters
 from MukeshRobot.modules.helper_funcs.chat_status import bot_admin, bot_can_delete
 
 from MukeshRobot.modules.helper_funcs.decorators import pbot, pbotmsg
