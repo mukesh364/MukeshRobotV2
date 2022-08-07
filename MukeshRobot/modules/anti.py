@@ -1,6 +1,6 @@
 import html
-from MukeshRobot import CallbackContext
-from MukeshRobot import Filters
+from pyrogram import CallbackContext
+from pyrogram import Filters
 from MukeshRobot.modules.helper_funcs.chat_status import bot_admin, bot_can_delete
 
 from MukeshRobot.modules.helper_funcs.decorators import pbot, pbotmsg
