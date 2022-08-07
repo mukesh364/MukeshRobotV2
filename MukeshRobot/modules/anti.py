@@ -1,10 +1,10 @@
 import html
-from MukeshRobot.ext import CallbackContext
-from MukeshRobot.ext.filters import Filters
+from MukeshRobot import CallbackContext
+from MukeshRobot import Filters
 from MukeshRobot.modules.helper_funcs.chat_status import bot_admin, bot_can_delete
 
 from MukeshRobot.modules.helper_funcs.decorators import pbot, pbotmsg
-from ..modules.helper_funcs.anonymous import user_admin, AdminPerms
+from MukeshRobot.modules.helper_funcs.anonymous import user_admin, AdminPerms
 import MukeshRobot.modules.sql.antilinkedchannel_sql as sql
 
 
