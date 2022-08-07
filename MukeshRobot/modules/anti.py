@@ -1,5 +1,5 @@
 import html
-from MukeshRobot import Update, TelegramError
+from MukeshRobot import Update
 from MukeshRobot.ext import CallbackContext
 from MukeshRobot.ext.filters import Filters
 from MukeshRobot.modules.helper_funcs.chat_status import bot_admin, bot_can_delete
