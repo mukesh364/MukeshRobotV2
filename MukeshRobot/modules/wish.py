@@ -7,7 +7,12 @@ from telethon import events
 from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from MukeshRobot.data import RAID, REPLYRAID, DEADLYSPAM
-from MukeshRobot.main import BOT
+from MukeshRobot.modules.helper_funcs.chat_status import (
+    bot_admin,
+    is_bot_admin,
+    is_user_ban_protected,
+    is_user_in_chat,
+)
 from config import SUDO_USERS
 
 OWNER_ID = SUDO_USERS
