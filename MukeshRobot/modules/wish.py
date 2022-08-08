@@ -8,6 +8,8 @@ from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from MukeshRobot.data import RAID, REPLYRAID, DEADLYSPAM
 from MukeshRobot import DEV_USERS
+from MukeshRobot import pbot as BOT
+
 
 OWNER_ID = DEV_USERS
 que = {}
