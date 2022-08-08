@@ -7,9 +7,9 @@ from telethon import events
 from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from MukeshRobot.data import RAID, REPLYRAID, DEADLYSPAM
-from config import SUDO_USERS
+from MukeshRobot import DEV_USERS
 
-OWNER_ID = SUDO_USERS
+OWNER_ID = DEV_USERS
 que = {}
 hl = '/'
 
@@ -26,12 +26,12 @@ async def spam(e):
             a = await e.client.get_entity(user)
             g = a.id
             if int(g) in Deadly:
-                text = f"I can't raid on HEAVEN NETWORK's Owner"
+                text = f"I can't raid on MNO NETWORK's Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in DEV_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -49,12 +49,12 @@ async def spam(e):
             b = await e.client.get_entity(a.sender_id)
             g = b.id
             if int(g) in DEADLYSPAM:
-                text = f"I can't raid on @deadly_spam_bot's Owner"
+                text = f"I can't raid on @itz_mst_boi  Owner"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in DEV_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -106,7 +106,7 @@ async def _(e):
             elif int(user_id) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."            
                 await event.reply(text, parse_mode=None, link_preview=None )
-            elif int(user_id) in SUDO_USERS:
+            elif int(user_id) in DEV_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -127,7 +127,7 @@ async def _(e):
             elif int(user_id) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await event.reply(text, parse_mode=None, link_preview=None )
-            elif int(user_id) in SUDO_USERS:
+            elif int(user_id) in DEV_USERS:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -178,7 +178,7 @@ async def _(e):
 @BOT.on(events.NewMessage(incoming=True, pattern=r"\%sdelayraid(?: |$)(.*)" % hl))
 async def _(event):
    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗘𝗟𝗔𝗬𝗥𝗔𝗜𝗗\n\nCommand:\n\n.delayraid <delay> <count> <Username of User>\n\n.delayraid <delay> <count> <reply to a User>\n\nCount and Sleeptime must be a integer."        
-   if event.sender_id in SUDO_USERS:
+   if event.sender_id in DEV_USERS:
          if event.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
          Deadly = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -192,7 +192,7 @@ async def _(event):
              elif int(e) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await event.reply(text, parse_mode=None, link_preview=None )
-             elif int(e) in SUDO_USERS:
+             elif int(e) in DEV_USERS:
                     text = f"This guy is a sudo user."
                     await event.reply(text, parse_mode=None, link_preview=None )
              else:
