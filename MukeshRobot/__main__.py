@@ -50,7 +50,6 @@ from telegram.ext import (
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
-from telethon import TelegramClient, events
 from pyrogram import __version__ as pyrover
 from platform import python_version as y
 from telegram.utils.helpers import escape_markdown
