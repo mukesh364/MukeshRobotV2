@@ -22,6 +22,7 @@ from MukeshRobot import (
     WOLVES,
     INFOPIC,
     dispatcher,
+    SUPPORT_CHAT
 )
 from MukeshRobot.__main__ import STATS, TOKEN, USER_INFO
 import MukeshRobot.modules.sql.userinfo_sql as sql
@@ -328,20 +329,40 @@ def info(update: Update, context: CallbackContext):
             message.reply_document(
                 document=open(f"{user.id}.png", "rb"),
                 caption=(text),
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                "ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/itz_mst_boi"),
+                            InlineKeyboardButton(
+                                "Disaster", url="https://t.me/mukeshbotzone/26")
+                        ],
+                    ]
+                ),
                 parse_mode=ParseMode.HTML,
-                disable_web_page_preview=True,
             )
-
+            
             os.remove(f"{user.id}.png")
         # Incase user don't have profile pic, send normal text
         except IndexError:
             message.reply_text(
-                text, parse_mode=ParseMode.HTML, disable_web_page_preview=True
+                text, 
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                "ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/itz_mst_boi"),
+                            InlineKeyboardButton(
+                                "Disaster", url="https://t.me/mukeshbotzone/26")
+                        ],
+                    ]
+                ),
+                parse_mode=ParseMode.HTML,
+                disable_web_page_preview=True
             )
-
     else:
         message.reply_text(
-            text, parse_mode=ParseMode.HTML, disable_web_page_preview=True
+            text, parse_mode=ParseMode.HTML, 
         )
 
     rep.delete()
