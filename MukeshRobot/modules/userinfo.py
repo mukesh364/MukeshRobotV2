@@ -2,6 +2,7 @@ import html
 import re
 import os
 import requests
+import time
 
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -22,6 +23,7 @@ from MukeshRobot import (
     WOLVES,
     INFOPIC,
     dispatcher,
+    StartTime,
 )
 from MukeshRobot.__main__ import STATS, TOKEN, USER_INFO
 import MukeshRobot.modules.sql.userinfo_sql as sql
@@ -52,6 +54,30 @@ def get_percentage(totalhp, earnedhp):
     per_of_totalhp = 100 - matched_less * 100.0 / totalhp
     per_of_totalhp = str(int(per_of_totalhp))
     return per_of_totalhp
+
+def get_readable_time(seconds: int) -> str:
+    count = 0
+    ping_time = ""
+    time_list = []
+    time_suffix_list = ["s", "m", "h", "days"]
+
+    while count < 4:
+        count += 1
+        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
+        if seconds == 0 and remainder == 0:
+            break
+        time_list.append(int(result))
+        seconds = int(remainder)
+
+    for x in range(len(time_list)):
+        time_list[x] = str(time_list[x]) + time_suffix_list[x]
+    if len(time_list) == 4:
+        ping_time += time_list.pop() + ", "
+
+    time_list.reverse()
+    ping_time += ":".join(time_list)
+
+    return ping_time
 
 
 def hpmanager(user):
@@ -292,9 +318,13 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>ᴡᴏʟғ</b>.\n"
         disaster_level_present = True
+    elif user.id ==5207640479:
+        text += "\n\nᴏᴡɴᴇʀ ᴏғ ʙᴏᴛ ʙᴀʙʏ . ʙᴏᴛ ɪɴsᴘɪʀᴇᴅ ʙʏ Mᴜᴋᴇsʜ<b>.\n"
+        disaster_level_present = True
+
 
     if disaster_level_present:
-        text += ' \n[<a href="https://t.me/DevilsHeavenMF/96962">ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴋɴᴏᴡ ᴡʜᴀᴛ ɪs ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs.</a>]'.format(
+        text += ' \n[<a href="https://t.me/mukeshbotzone/24">ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴋɴᴏᴡ ᴡʜᴀᴛ ɪs ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs.</a>]'.format(
             bot.username
         )
 
