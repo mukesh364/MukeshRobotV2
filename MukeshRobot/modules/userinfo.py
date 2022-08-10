@@ -342,6 +342,7 @@ def info(update: Update, context: CallbackContext):
                             text="➕ᴀᴅᴅ ᴍᴇ ᴇʟsᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕",
                             url=f"https://t.me/groupcontrollertgbot?startgroup=true",
                           ),
+                        ]
                     ]
                 ),
                 parse_mode=ParseMode.HTML,
