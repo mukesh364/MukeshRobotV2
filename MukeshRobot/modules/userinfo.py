@@ -339,7 +339,8 @@ def info(update: Update, context: CallbackContext):
                         ],
                         [
                            InlinekeyboardButton(
-                               "➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ Gʀᴏᴜᴘ➕", url="https://t.me/groupcontrollertgbot?startgroup=true",)
+                               "➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ Gʀᴏᴜᴘ➕", url="https://t.me/groupcontrollertgbot?startgroup=true",
+                        ),
                         ],
                     ]
                 ),
