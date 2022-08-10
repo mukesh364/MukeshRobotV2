@@ -337,11 +337,11 @@ def info(update: Update, context: CallbackContext):
                             InlineKeyboardButton(
                                 "Dɪsᴀsᴛᴇʀ", url="https://t.me/mukeshbotzone/26")
                         ],
-                        [
-                           InlinekeyboardButton(
-                               "➕ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ Gʀᴏᴜᴘ➕", url=f"https://t.me/groupcontrollertgbot?startgroup=true",
+                        [   
+                            InlineKeyboardButton(
+                            text="➕ᴀᴅᴅ ᴍᴇ ᴇʟsᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕",
+                            url=f"https://t.me/groupcontrollertgbot?startgroup=true",
                           ),
-                        ],
                     ]
                 ),
                 parse_mode=ParseMode.HTML,
