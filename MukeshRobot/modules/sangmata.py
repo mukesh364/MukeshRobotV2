@@ -1,7 +1,7 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from MukeshRobot import telethn as tbot
 from MukeshRobot.events import register
-from MukeshRobot import ubot2 as ubot
+from MukeshRobot import pbot as ubot
 from asyncio.exceptions import TimeoutError
 
 
@@ -30,7 +30,7 @@ async def lastname(steal):
                 response = await conv.get_response()
             except YouBlockedUserError:
                 await steal.reply(
-                    "```Error, report to @DeCodeSupport```"
+                    "```Error, report to @worldwide_friend_zone```"
                 )
                 return
             if r.text.startswith("Name"):
