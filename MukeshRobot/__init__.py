@@ -33,8 +33,8 @@ async def eor(msg: Message, **kwargs):
         if msg.from_user
         else msg.reply
    )
-   spec = getfullargspec(func.__wrapped__).args
-   return await func(**{k: v for k, v in kwargs.items() if k in spec})
+    spec = getfullargspec(func.__wrapped__).args
+    return await func(**{k: v for k, v in kwargs.items() if k in spec})
 
 ENV = bool(os.environ.get("ENV", False))
 
