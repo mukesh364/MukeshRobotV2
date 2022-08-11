@@ -102,7 +102,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="❄ ᴀʙᴏᴜᴛ ❄", callback_data="mukesh_"),
-        InlineKeyboardButton(text="✨ Music ✨", callback_data="Music_"),
+        InlineKeyboardButton(text="ᴍᴜsɪᴄ", callback_data="Music_"),
     ],
     [
         InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
@@ -462,9 +462,9 @@ def Mukesh_about_callback(update: Update, context: CallbackContext):
 @run_async
 def Music_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "Music_":
+    if query.data =="Music_":
         query.message.edit_text(
-            text=f"""
+           text=f"""
 **ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅs:**
 
  ᴊᴜsᴛ ᴀᴅᴅ **ᴄ** ɪɴ ᴛʜᴇ sᴛᴀʀᴛɪɴɢ ᴏғ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜsᴇ ᴛʜᴇᴍ ғᴏʀ ᴄʜᴀɴɴᴇʟ.
