@@ -1,70 +1,80 @@
-import html
+import asyncio
+from pyrogram import filters
+from MukeshRobot import pbot as app
+from pyrogram.types import Message
+from MukeshRobot import eor
+from MukeshRobot.utils.errors import capture_err
 
-from telegram import Update
-from telegram.ext import CallbackContext
-from telegram.ext.filters import Filters
+active_channel = []
 
-from MukeshRobot.modules.helper_funcs.anonymous import AdminPerms, user_admin
-from MukeshRobot.modules.helper_funcs.decorators import emikocmd, emikomsg
-from MukeshRobot.modules.sql.antichannel_sql import (
-    antichannel_status,
-    disable_antichannel,
-    enable_antichannel,
-)
+async def channel_toggle(db, message: Message):
+    status = message.text.split(None, 1)[1].lower()
+    chat_id = message.chat.id
+    if status == "on":
+        if chat_id not in db:
+            db.append(chat_id)
+            text = "**Anti Channel Mode `enabled` ✅. I will delete all message that send with channel names. Dare to leap**"
+            return await eor(message, text=text)
+        await eor(message, text="antichannel Is Already Enabled.")
+    elif status == "off":
+        if chat_id in db:
+            db.remove(chat_id)
+            return await eor(message, text="antichannel Disabled!")
+        await eor(message, text=f"**Anti Channel Mode Successfully Deactivated In The Chat** {message.chat.id} ❌")
+    else:
+        await eor(message, text="I undestand `/antichannel on` and `/antichannel off` only")
 
 
-@emikocmd(command="antichannel", group=100)
-@user_admin(AdminPerms.CAN_RESTRICT_MEMBERS)
-def set_antichannel(update: Update, context: CallbackContext):
-    message = update.effective_message
-    chat = update.effective_chat
-    args = context.args
-    if len(args) > 0:
-        s = args[0].lower()
-        if s in ["yes", "on"]:
-            enable_antichannel(chat.id)
-            message.reply_html(
-                "Enabled antichannel in {}".format(html.escape(chat.title))
-            )
-        elif s in ["off", "no"]:
-            disable_antichannel(chat.id)
-            message.reply_html(
-                "Disabled antichannel in {}".format(html.escape(chat.title))
-            )
-        else:
-            message.reply_text("Unrecognized arguments {}".format(s))
-        return
-    message.reply_html(
-        "Antichannel setting is currently {} in {}".format(
-            antichannel_status(chat.id), html.escape(chat.title)
-        )
+# Enabled | Disable antichannel
+
+
+@app.on_message(filters.command("antichannel") & ~filters.edited)
+@capture_err
+async def antichannel_status(_, message: Message):
+    if len(message.command) != 2:
+        return await eor(message, text="I undestand `/antichannel on` and `/antichannel off` only")
+    await channel_toggle(active_channel, message)
+
+
+
+@app.on_message(
+    (
+        filters.document
+        | filters.photo
+        | filters.sticker
+        | filters.animation
+        | filters.video
+        | filters.text
     )
-
-
-@emikomsg(Filters.chat_type.groups, group=110)
-def eliminate_channel(update: Update, context: CallbackContext):
-    message = update.effective_message
-    chat = update.effective_chat
-    bot = context.bot
-    if not antichannel_status(chat.id):
+    & ~filters.private,
+    group=41,
+)
+async def anitchnl(_, message):
+  chat_id = message.chat.id
+  if message.sender_chat:
+    sender = message.sender_chat.id 
+    if message.chat.id not in active_channel:
         return
-    if (
-        message.sender_chat
-        and message.sender_chat.type == "channel"
-        and not message.is_automatic_forward
-    ):
-        message.delete()
-        sender_chat = message.sender_chat
-        bot.ban_chat_sender_chat(sender_chat_id=sender_chat.id, chat_id=chat.id)
+    if chat_id == sender:
+        return
+    else:
+        await message.delete()
+        ti = await message.reply_text("**A anti-channel message detected. I deleted it..!**")
+        await asyncio.sleep(7)
+        await ti.delete()        
 
 __mod_name__ = "Aɴᴛɪ-Cʜᴀɴɴᴇʟ"
-
 __help__ = """
-Commands
-
-✗ /antichannel on - `to on antichannel.`
-
-✗ /antichannel off - `to of antichannel`
-
-*✗ Pᴏᴡᴇʀᴇᴅ 💕 Bʏ: @mastermind_network_official!*
-"""
+your groups to stop anonymous channels sending messages into your chats.
+**Type of messages**
+        - document
+        - photo
+        - sticker
+        - animation
+        - video
+        - text
+        
+**Admin Commands:**
+ - /antichannel [on / off] - Anti- channel  function 
+**Note** : If linked channel  send any containing characters in this type when on  function no del    
+ """
