@@ -33,3 +33,4 @@
 
 [sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ](https://t.me/mukeshbotzone)
  
+[ᴘᴏᴡᴇʀᴇᴅ ʙʏ](t.me/mastermind_network_Official)
