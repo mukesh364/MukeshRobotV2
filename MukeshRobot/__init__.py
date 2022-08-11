@@ -10,6 +10,7 @@ from Python_ARQ import ARQ
 from pyrogram.types import Message
 from pyrogram import Client, errors
 from telethon import TelegramClient
+from inspect import getfullargspec
 
 StartTime = time.time()
 
