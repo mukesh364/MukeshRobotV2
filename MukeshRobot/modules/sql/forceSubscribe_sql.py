@@ -1,9 +1,10 @@
-from sqlalchemy import Column, String, Numeric, Boolean
+from sqlalchemy import Column, Numeric, String
+
 from MukeshRobot.modules.sql import BASE, SESSION
 
 
-class forceSubscribe(BASE):
-    __tablename__ = "forceSubscribe"
+class fforceSubscribe(BASE):
+    __tablename__ = "fforceSubscribe"
     chat_id = Column(Numeric, primary_key=True)
     channel = Column(String)
 
@@ -12,14 +13,14 @@ class forceSubscribe(BASE):
         self.channel = channel
 
 
-forceSubscribe.__table__.create(checkfirst=True)
+fforceSubscribe.__table__.create(checkfirst=True)
 
 
 def fs_settings(chat_id):
     try:
         return (
-            SESSION.query(forceSubscribe)
-            .filter(forceSubscribe.chat_id == chat_id)
+            SESSION.query(fforceSubscribe)
+            .filter(fforceSubscribe.chat_id == chat_id)
             .one()
         )
     except:
@@ -29,17 +30,17 @@ def fs_settings(chat_id):
 
 
 def add_channel(chat_id, channel):
-    adder = SESSION.query(forceSubscribe).get(chat_id)
+    adder = SESSION.query(fforceSubscribe).get(chat_id)
     if adder:
         adder.channel = channel
     else:
-        adder = forceSubscribe(chat_id, channel)
+        adder = fforceSubscribe(chat_id, channel)
     SESSION.add(adder)
     SESSION.commit()
 
 
 def disapprove(chat_id):
-    rem = SESSION.query(forceSubscribe).get(chat_id)
+    rem = SESSION.query(fforceSubscribe).get(chat_id)
     if rem:
         SESSION.delete(rem)
         SESSION.commit()
