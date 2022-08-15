@@ -1,5 +1,3 @@
-
-
 from io import BytesIO
 from time import sleep
 from typing import Optional, List
@@ -15,7 +13,7 @@ from MukeshRobot.modules.helper_funcs.chat_status import is_user_ban_protected, 
 import random
 import telegram
 import MukeshRobot.modules.sql.users_sql as sql
-from MukeshRobot import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, LOGGER
+from MukeshRobot import dispatcher, OWNER_ID, DRAGONS, JOIN_LOGGER
 from MukeshRobot.modules.helper_funcs.filters import CustomFilters
 from MukeshRobot.modules.disable import DisableAbleCommandHandler
 USERS_GROUP = 4
