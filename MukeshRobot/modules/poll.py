@@ -7,7 +7,7 @@ from MukeshRobot.confing import get_str_key
 from MukeshRobot.events import register
 from MukeshRobot import telethn as tbot
 
-MONGO_DB_URI = get_str_key("MONGO_URI", required=True)
+MONGO_DB_URI = get_str_key("MONGO_DB_URI", required=True)
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
 db = client["Mukesh"]
