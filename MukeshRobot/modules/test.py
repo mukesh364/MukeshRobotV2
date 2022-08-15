@@ -4,7 +4,7 @@ import requests
 from telethon import types
 
 from MukeshRobot.events import register
-from MukeshRobot import tbot as client
+from MukeshRobot import pbot as client
 
 
 async def is_register_admin(chat, user):
