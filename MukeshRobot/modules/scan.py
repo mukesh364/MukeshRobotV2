@@ -5,7 +5,7 @@ from telethon.tl.types import DocumentAttributeFilename, MessageMediaDocument
 
 from MukeshRobot.confing import get_str_key
 from MukeshRobot.events import register
-from MukeshRobot import telethon as tbot
+from MukeshRobot import telethn as tbot
 
 
 async def is_register_admin(chat, user):
