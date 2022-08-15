@@ -2,7 +2,7 @@ from pymongo import MongoClient
 from telethon import *
 from telethon.tl import *
 
-from MukeshRobot import BOT
+from MukeshRobot import BOT_ID
 from MukeshRobot.confing import get_str_key
 from MukeshRobot.events import register
 from MukeshRobot import telethn as tbot
