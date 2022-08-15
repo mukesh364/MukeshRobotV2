@@ -3,9 +3,9 @@ import cloudmersive_virus_api_client
 from telethon.tl import functions, types
 from telethon.tl.types import DocumentAttributeFilename, MessageMediaDocument
 
-from MukeshRobot.config import get_str_key
-from MukeshRobot.services.events import register
-from MukeshRobot.services.telethon import tbot
+from MukeshRobot.confing import get_str_key
+from MukeshRobot.events import register
+from MukeshRobot import telethon import tbot
 
 
 async def is_register_admin(chat, user):
