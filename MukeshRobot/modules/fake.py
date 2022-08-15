@@ -4,10 +4,10 @@ from faker import Faker
 from faker.providers import internet
 from telethon import events
 
-from  MukeshRobot import telethon as pbot
+from  MukeshRobot import telethon as tbot
 
 
-@pbot.on(events.NewMessage(pattern="/fakegen$"))
+@tbot.on(events.NewMessage(pattern="/fakegen$"))
 async def hi(event):
     if event.fwd_from:
         return
