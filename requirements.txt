@@ -1,3 +1,4 @@
+fuzzysearch
 cloudmersive_virus_api_client==3.0.1
 future
 faker
