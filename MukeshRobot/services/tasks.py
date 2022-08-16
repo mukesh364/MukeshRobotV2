@@ -2,7 +2,7 @@ from asyncio import Lock, create_task
 from time import time
 from pyrogram import filters
 from pyrogram.types import Message
-from MukeshRobot import BOT_ID, BOT_USERNAME, DEV_USERS
+from MukeshRobot import BOT_USERNAME, DEV_USERS
 from MukeshRobot.services.sections import bold, section, w
 tasks = {}
 TASKS_LOCK = Lock()
