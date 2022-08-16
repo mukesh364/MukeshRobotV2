@@ -18,8 +18,4 @@ def get_urls_from_text(text: str) -> bool:
     return [x[0] for x in findall(regex, str(text))]
     if not get_urls_from_text(btn_url):
                 continue
-            keyboard[btn_txt] = btn_url
-        keyboard = ikb(keyboard, row_width)
-    except Exception:
-        return
-    return text, keyboard
+            
