@@ -123,14 +123,14 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[Mukesh Robot ❤️](https://t.me/the_support_Chat):**
-**MainBot:** `{bot_state}`
-**UserBot:** `{ubot_state}`
-**Python:** `{pyver.split()[0]}`
-**Pyrogram:** `{pyrover}`
-**MongoDB:** `{mongover}`
-**Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [UBOT](t.me/mukesh_bot_zone)
+**[ɢʀᴏᴜᴘ ⍟ ᴄᴏɴᴛʀᴏʟʟᴇʀ](https://t.me/groupcontrollertgbot):**
+**ᴍᴀɪɴʙᴏᴛ:** `{bot_state}`
+**ᴜsᴇʀʙᴏᴛ:** `{ubot_state}`
+**ᴘʏᴛʜᴏɴ:** `{pyver.split()[0]}`
+**ᴘʏʀᴏɢʀᴀᴍ:** `{pyrover}`
+**ᴍᴏɴɢᴏᴅʙ:** `{mongover}`
+**ᴘʟᴀᴛғᴏʀᴍ:** `{sys.platform}`
+**ᴘʀᴏғɪʟᴇs:** [BOT](t.me/{BOT_USERNAME}) | [ᴜᴘᴅᴀᴛᴇ](t.me/mukesh_bot_zone)
 """
     answers.append(
         InlineQueryResultArticle(
@@ -428,7 +428,7 @@ async def tg_search_func(answers, text, user_id):
 
 
 async def music_inline_func(answers, query):
-    chat_id = 
+    chat_id = -1001770762410
     group_invite = "https://t.me/the_support_chat"
     try:
         messages = [
