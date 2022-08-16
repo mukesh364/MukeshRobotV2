@@ -28,7 +28,7 @@ from MukeshRobot import (
     DEV_USERS,
     EVENT_LOGS,
     BOT_USERNAME,
-    ubot2,
+    pbot,
 )
 from MukeshRobot import pbot as app
 from MukeshRobot import arq
@@ -119,7 +119,7 @@ async def inline_help_func(__HELP__):
 async def alive_function(answers):
     buttons = InlineKeyboard(row_width=2)
     bot_state = "Dead" if not await app.get_me() else "Alive"
-    ubot_state = "Dead" if not await ubot2.get_me() else "Alive"
+    ubot_state = "Dead" if not await pbot.get_me() else "Alive"
     buttons.add(
         InlineKeyboardButton("Main bot", url="https://t.me/EmiexRobot"),
         InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
@@ -395,7 +395,7 @@ async def tg_search_func(answers, text, user_id):
 
         return answers
     text = text[0:-1]
-    async for message in ubot2.search_global(text, limit=49):
+    async for message in pbot.search_global(text, limit=49):
         buttons = InlineKeyboard(row_width=2)
         buttons.add(
             InlineKeyboardButton(
@@ -436,7 +436,7 @@ async def music_inline_func(answers, query):
     try:
         messages = [
             m
-            async for m in ubot2.search_messages(
+            async for m in pbot.search_messages(
                 chat_id, query, filter="audio", limit=100
             )
         ]
