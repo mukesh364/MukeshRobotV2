@@ -16,6 +16,5 @@ def get_urls_from_text(text: str) -> bool:
                 \([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\
                 ()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))""".strip()
     return [x[0] for x in findall(regex, str(text))]
-    if not get_urls_from_text(btn_url):
-                continue
+    
             
