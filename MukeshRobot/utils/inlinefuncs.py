@@ -40,8 +40,8 @@ from MukeshRobot.utils.pluginhelper import (
 from MukeshRobot.services.tasks import _get_tasks_text, all_tasks, rm_task
 from MukeshRobot.services.types import InlineQueryResultCachedDocument
 from MukeshRobot.modules.sql import afk_sql as sql
-from MukeshRobot.modules.musical import YoutubeSearch
-from MukeshRobot.utils.functions import test_speedtest
+from MukeshRobot.modules.song  from youtube_search import YoutubeSearch
+from MukeshRobot.modules.helper_funcs.filters import CustomFilters
 from MukeshRobot.utils.pastebin import paste
 
 MESSAGE_DUMP_CHAT = EVENT_LOGS
@@ -65,8 +65,6 @@ keywords_list = [
     "yt",
     "info",
     "google",
-    "gh",
-    "torrent",
     "pokedex",
     "saavn",
     "wiki",
