@@ -39,8 +39,8 @@ from MukeshRobot.utils.pluginhelper import (
 )
 from MukeshRobot.services.tasks import _get_tasks_text, all_tasks, rm_task
 from MukeshRobot.services.types import InlineQueryResultCachedDocument
-from MukeshRobot.modules.info import get_chat_info, get_user_info
-from MukeshRobot.modules.music import download_youtube_audio
+from MukeshRobot.modules.afk import afk_sql as sql
+from MukeshRobot.modules.musical import YoutubeSearch
 from MukeshRobot.utils.functions import test_speedtest
 from MukeshRobot.utils.pastebin import paste
 
